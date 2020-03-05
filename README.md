@@ -1,2 +1,4 @@
 # code_samples
-I look into some of my pet projects
+A look into some of my pet projects
+
+Each project is in it's own folder, feel free to check them out
