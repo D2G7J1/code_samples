@@ -1,0 +1,167 @@
+:root {
+    --player1-color: red;
+    --player2-color: blue;
+    --game-highlight: linear-gradient(90deg, rgba(124,196,127,1) 0%, rgba(76,175,80,1) 100%);
+    --game-max-width: 600px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background:#efeeee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    max-width: var(--game-max-width);
+    width: 67%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 20px;
+    margin-left: -1px;
+}
+
+aside{
+    font-size: large;
+    cursor: pointer;
+    display: none;
+}
+
+aside:hover{
+    text-decoration: underline;
+}
+
+main{
+    max-width: var(--game-max-width);
+    width:70%;
+    height: 70%;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr) 50px;
+    grid-template-areas: "twelve thirteen fourteen fifteen"
+                         "eight nine ten eleven"
+                         "four five six seven"
+                         "_zero one two three"
+                         "btn0 btn1 btn2 btn3";
+}
+
+
+.button{
+    box-shadow: -6px -6px 16px #ffffff99,
+                6px 6px 16px #d1cdc799;
+    background: var(--game-highlight);
+    border: 4px solid #efeeee;
+    border-radius: 12px;
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #efeeee;
+}
+
+div{
+    background: #efeeee;
+    box-shadow: inset -6px -6px 16px #ffffff99,
+                inset 6px 6px 16px #d1cdc799;
+    cursor: pointer;
+
+}
+
+.gameCell{
+    border: 1vw solid#efeeee;
+}
+
+/* buttons for game */
+#column0{
+    grid-area: btn0;
+}
+#column1{
+    grid-area: btn1;
+}
+#column2{
+    grid-area: btn2;
+}
+#column3{
+    grid-area: btn3;
+}
+
+/* individual game cells */
+#cell0{
+    grid-area: _zero;
+}
+#cell1{
+    grid-area: one;
+}
+#cell2{
+    grid-area: two;
+}
+#cell3{
+    grid-area: three;
+}
+#cell4{
+    grid-area: four;
+}
+#cell5{
+    grid-area: five;
+}
+#cell6{
+    grid-area: six;
+}
+#cell7{
+    grid-area: seven;
+}
+#cell8{
+    grid-area: eight;
+}
+#cell9{
+    grid-area: nine;
+}
+#cell10{
+    grid-area: ten;
+}
+#cell11{
+    grid-area: eleven;
+}
+#cell12{
+    grid-area: twelve;
+}
+#cell13{
+    grid-area: thirteen;
+}
+#cell14{
+    grid-area: fourteen;
+}
+#cell15{
+    grid-area: fifteen;
+}
+
+.player1{
+    background: var(--player1-color);
+}
+
+.player2{
+    background: var(--player2-color);
+}
+
+.winner{
+    background: var(--game-highlight);
+}
+
