@@ -1,0 +1,5 @@
+This is a connect 3 game, using a vanilla js based ai that learns as it plays against you
+--Check out the class for the ai in the zerothOrder folder, named like this based on the math principle of zeroth order moribundity
+--The game itself can be found in the script.js file
+
+Made with vanilla es6 and css grid
